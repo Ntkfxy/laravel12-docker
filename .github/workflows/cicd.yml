@@ -21,14 +21,14 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ntkfxy --password-stdin
 
       - name: Build Docker Image
-        run: docker build -t ghcr.io/ntkfxy/laravel-app:latest .
+        run: docker build -t ghcr.io/ntkfxy/laravel12-docker:latest .
 
       - name: Push Docker Image
-        run: docker push ghcr.io/ntkfxy/laravelt-app:latest
+        run: docker push ghcr.io/ntkfxy/laravel12-docker:latest
 
       - name: Extract React build from container
         run: |
-          CONTAINER_ID=$(docker create ghcr.io/ntkfxy/laravel-app:latest)
+          CONTAINER_ID=$(docker create ghcr.io/ntkfxy/laravel12-docker:latest)
           docker cp $CONTAINER_ID:/usr/share/nginx/html ./dist
           docker rm -v $CONTAINER_ID
 
