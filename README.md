@@ -257,11 +257,3 @@ MAIL_FROM_NAME="${APP_NAME}"
 - พิจารณาเพิ่ม Xdebug ใน image ถ้าต้องการ debug แบบ step-by-step
 - สร้าง `Makefile` หรือ `scripts/` เพื่อรวมคำสั่งที่ใช้บ่อย เช่น `make up`, `make install`, `make test`
 
----
-ไฟล์ README นี้อัปเดตเพื่อรวมคำอธิบายเชิงลึกของ `Dockerfile`, `nginx` config, ตัวอย่าง `.env`, คำสั่งติดตั้ง/รัน และแนวทางแก้ไขปัญหาที่พบบ่อย ถ้าต้องการให้ผม:
-
-- เพิ่มตัวอย่าง `.env` ที่มีค่าเริ่มต้นแบบปลอดภัย (mask secrets)
-- เพิ่ม workflow สำหรับ CI/CD (GitHub Actions)
-- รัน `docker compose up -d --build` แล้วสรุปสถานะคอนเทนเนอร์ให้
-
-ให้ผมดำเนินการต่อแบบไหนบอกได้เลย
